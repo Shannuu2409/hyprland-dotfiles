@@ -1,0 +1,125 @@
+linux-configs/
+│
+├── 📄 Documentation (7 files)
+│   ├── README.md                      Main installation guide and overview
+│   ├── CONFIGURATION-GUIDE.md         Complete customization reference (500+ lines)
+│   ├── WALLPAPER-GUIDE.md             Wallpaper selection and creation guide
+│   ├── QUICK-REFERENCE.md             One-page cheat sheet for daily use
+│   ├── FILE-STRUCTURE.md              Package organization explained
+│   ├── PACKAGE-SUMMARY.md             Complete package overview
+│   ├── CHANGELOG.md                   Version history and credits
+│   └── TREE.txt                       This file
+│
+├── 🔧 Installation Script
+│   └── install.sh                     Automated installer with backups
+│
+├── ⚙️ Hyprland Configuration (2 files)
+│   └── hypr/
+│       ├── hyprland.conf              Main Hyprland config (400+ lines)
+│       │                              ├─ General settings (gaps, borders, layout)
+│       │                              ├─ Decoration (blur, rounding, shadows)
+│       │                              ├─ Animations (window transitions)
+│       │                              ├─ Window rules (opacity, floating, workspaces)
+│       │                              ├─ Keybindings (50+ shortcuts)
+│       │                              └─ Layer rules (blur for Waybar, Wofi, Dunst)
+│       │
+│       └── hyprpaper.conf             Wallpaper manager configuration
+│
+├── 📊 Waybar Configuration (2 files)
+│   └── waybar/
+│       ├── config                     Module configuration (JSON)
+│       │                              ├─ Module layout (left, center, right)
+│       │                              ├─ Workspaces, window title
+│       │                              ├─ Clock, CPU, memory, network
+│       │                              └─ Battery, audio, system tray
+│       │
+│       └── style.css                  Visual styling (250+ lines)
+│                                      ├─ Glassmorphic floating card design
+│                                      ├─ Monochrome color scheme
+│                                      ├─ Workspace button styling
+│                                      ├─ Module appearance
+│                                      └─ Hover effects and animations
+│
+├── 💻 Terminal Configuration (1 file)
+│   └── kitty/
+│       └── kitty.conf                 Complete Kitty config (200+ lines)
+│                                      ├─ JetBrainsMono font configuration
+│                                      ├─ 16-color monochrome palette
+│                                      ├─ Background opacity (0.8)
+│                                      ├─ Tab bar styling
+│                                      └─ Keybindings
+│
+├── 🚀 Launcher Configuration (2 files)
+│   └── wofi/
+│       ├── config                     Launcher behavior settings
+│       │                              ├─ Window dimensions (600x400)
+│       │                              ├─ Display mode (drun)
+│       │                              ├─ Fuzzy matching
+│       │                              └─ Image settings
+│       │
+│       └── style.css                  Launcher appearance (150+ lines)
+│                                      ├─ Glassmorphic design
+│                                      ├─ Search input field styling
+│                                      ├─ Result entry appearance
+│                                      └─ Selection highlighting
+│
+├── 🔔 Notification Configuration (1 file)
+│   └── dunst/
+│       └── dunstrc                    Dunst configuration (100+ lines)
+│                                      ├─ Geometry and positioning
+│                                      ├─ Font and appearance
+│                                      ├─ Frame and borders
+│                                      ├─ Urgency levels
+│                                      └─ Mouse actions
+│
+└── 🎵 Spotify Theme (1 file) [OPTIONAL]
+    └── spicetify/
+        └── Themes/
+            └── Sleek/
+                └── color.ini          Monochrome color scheme (60+ lines)
+                                       ├─ Main colors (foreground, background)
+                                       ├─ Accent colors
+                                       ├─ Text colors
+                                       └─ Background variants
+
+═══════════════════════════════════════════════════════════════════════════
+
+SUMMARY:
+  📄 7 documentation files (~2,000+ lines)
+  ⚙️ 10 configuration files (~1,200+ lines)
+  🔧 1 installation script (~200 lines)
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📦 18 total files in package
+
+INSTALLATION DESTINATIONS:
+  linux-configs/hypr/*        →  ~/.config/hypr/
+  linux-configs/waybar/*      →  ~/.config/waybar/
+  linux-configs/kitty/*       →  ~/.config/kitty/
+  linux-configs/wofi/*        →  ~/.config/wofi/
+  linux-configs/dunst/*       →  ~/.config/dunst/
+  linux-configs/spicetify/*   →  ~/.config/spicetify/
+
+KEY FEATURES:
+  ✓ Strict monochrome palette (black, white, grey only)
+  ✓ Heavy Gaussian blur (12px, 4 passes)
+  ✓ Glassmorphism with 0.7 opacity
+  ✓ Solid 2px white borders
+  ✓ 10px corner rounding
+  ✓ 50+ configured keybindings
+  ✓ 30+ window management rules
+  ✓ Complete documentation
+
+COLOR PALETTE:
+  #000000  ████  Pure Black
+  #080808  ████  Dark Charcoal
+  #111111  ████  Darker Grey
+  #333333  ████  Border Grey
+  #ffffff  ████  Pure White
+
+QUICK START:
+  1. cd linux-configs
+  2. chmod +x install.sh
+  3. ./install.sh
+  4. Read README.md for next steps
+
+═══════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,181 @@
+/* -------- Transparent Waybar Black Text -------- */
+
+@define-color base rgba(0, 0, 0, 0.10);
+@define-color hoverBg rgba(255, 255, 255, 0.15);
+@define-color activeBg rgba(255, 255, 255, 0.25);
+@define-color text #000000;
+
+/* Global */
+* {
+  all: unset;
+  font-size: 1rem;
+  font-weight: 800;
+  font-family:
+    JetBrainsMonoNerdFont,
+    Font Awesome,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  background-clip: border-box;
+  color: @text;
+}
+
+/* Waybar container (almost invisible) */
+window#waybar {
+  background: transparent;
+  margin: 6px 10px 0 10px;
+}
+
+/* Buttons */
+button {
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 8px;
+  transition: all 120ms ease;
+  background: transparent;
+}
+
+button:hover {
+  background: @hoverBg;
+}
+
+button.active {
+  background: @activeBg;
+}
+
+/* Workspaces */
+#workspaces button {
+  margin-right: 1px;
+  padding: 0 2px;
+  background: transparent;
+  transition: all 120ms ease; /* smooth scaling for active button */
+}
+
+#workspaces button:last-child {
+  margin-right: 0;
+}
+
+/* Increase active workspace button size */
+#workspaces button.active {
+  min-width: 40px;    /* bigger than normal 32px */
+  min-height: 40px;   /* bigger than normal 32px */
+  padding: 0 6px;     /* more spacing inside */
+  font-size: 1.2rem;  /* slightly bigger text/icon */
+}
+
+/* Window title */
+#window {
+  margin-right: 8px;
+  padding: 0 12px;
+  background: transparent;
+}
+
+/* Remove backgrounds from modules */
+#custom-appmenu,
+#custom-audio-switch,
+#quicklinks,
+#sound,
+#custom-vpn,
+#clock,
+#workspaces,
+#media,
+#custom-notification,
+#tray,
+#pulseaudio,
+#network,
+#battery,
+#backlight {
+  background: transparent;
+  padding: 0 12px;
+}
+
+/* Media */
+#media {
+  min-width: 32px;
+  min-height: 32px;
+  font-size: 18px;
+}
+
+/* Quicklinks */
+#custom-quicklink1,
+#custom-quicklink2,
+#custom-quicklink3,
+#custom-quicklink4,
+#custom-quicklink5,
+#custom-quicklink6,
+#custom-quicklink7,
+#custom-quicklink8,
+#custom-quicklink9,
+#custom-quicklink10 {
+  font-size: 1.4rem;
+  margin: 0 0.4rem;
+}
+
+/* Tray effects */
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background: @activeBg;
+}
+
+/* Battery critical blink */
+@keyframes blink {
+  to {
+    background-color: @activeBg;
+  }
+}
+
+#battery.critical:not(.charging) {
+  animation: blink 0.7s linear infinite alternate;
+}
+
+/* Hover */
+#custom-vpn:hover,
+#custom-audio-switch:hover,
+#custom-notification:hover,
+#sound:hover,
+#clock:hover,
+#custom-appmenu:hover,
+#media:hover {
+  background: @hoverBg;
+}
+
+/* Tooltip */
+tooltip {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+tooltip label {
+  color: white;
+}
+
+/* -------- Black background behind Wi-Fi and Bluetooth icons -------- */
+
+/* Wi-Fi icon background */
+#network > .label {
+    background-color: #000000; /* solid black behind icon */
+    border-radius: 6px;        /* small rounded corners */
+    padding: 2px 6px;          /* space around icon */
+}
+
+/* Bluetooth icon background (inside PulseAudio) */
+#pulseaudio > .label {
+    background-color: #000000; /* solid black behind icon */
+    border-radius: 6px;        /* small rounded corners */
+    padding: 2px 6px;
+}
+
+/* Optional hover effect */
+#network > .label:hover,
+#pulseaudio > .label:hover {
+    background-color: #111111; /* slightly lighter black */
+}
+

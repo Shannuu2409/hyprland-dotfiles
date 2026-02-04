@@ -1,0 +1,8 @@
+# Backups and editor
+*.bak
+*.sw?
+.DS_Store
+*~
+
+# Optional: ignore default wallpaper if large (uncomment if needed)
+# hypr/wallpapers/wallpaper.jpg

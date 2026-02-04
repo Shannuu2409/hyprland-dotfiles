@@ -1,0 +1,152 @@
+/* ============================================
+ * saneAspect Noir - Wofi Style
+ * Monochromatic Glassmorphism Launcher
+ * ============================================ */
+
+/* ============================================
+ * MAIN WINDOW
+ * ============================================ */
+window {
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.5);           /* Semi-transparent black */
+    border: 2px solid rgba(255, 255, 255, 0.3);     /* Frosted border */
+    border-radius: 12px;
+    backdrop-filter: blur(25px);                     /* FULL BLUR effect */
+    -webkit-backdrop-filter: blur(25px);
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* ============================================
+ * OUTER BOX
+ * ============================================ */
+#outer-box {
+    margin: 0px;
+    padding: 12px;
+    background-color: transparent;
+}
+
+/* ============================================
+ * INPUT (SEARCH BAR)
+ * ============================================ */
+#input {
+    margin: 10px 0;
+    padding: 12px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    font-weight: 700;
+    outline: none;
+    caret-color: #ffffff;
+    backdrop-filter: blur(15px);
+}
+
+#input:focus {
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+/* ============================================
+ * INNER BOX (RESULTS CONTAINER)
+ * ============================================ */
+#inner-box {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: transparent;
+}
+
+/* ============================================
+ * SCROLLBAR
+ * ============================================ */
+#scroll {
+    margin: 0;
+    padding: 0;
+}
+
+scrollbar {
+    background-color: transparent;
+}
+
+scrollbar slider {
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    min-width: 8px;
+}
+
+scrollbar slider:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================
+ * ENTRY (APPLICATION ITEMS)
+ * ============================================ */
+#entry {
+    margin: 4px 0;
+    padding: 12px 18px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+#entry:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+#entry:selected {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    font-weight: 900;
+    outline: none;
+}
+
+/* ============================================
+ * ENTRY TEXT
+ * ============================================ */
+#text {
+    color: #ffffff;
+    font-weight: 700;
+    flex-grow: 1;
+}
+
+#entry:selected #text {
+    color: #ffffff;
+    font-weight: 900;
+}
+
+/* ============================================
+ * ENTRY ICON
+ * ============================================ */
+#img {
+    margin-right: 12px;
+    background-color: transparent;
+    width: 18px;
+    height: 18px;
+}
+
+/* ============================================
+ * NO RESULTS MESSAGE
+ * ============================================ */
+#text:disabled {
+    color: #888888;
+}
+
+/* ============================================
+ * EXPANDER (FOR ADDITIONAL OPTIONS)
+ * ============================================ */
+#expander {
+    background-color: transparent;
+}
+
+#expander arrow {
+    color: #ffffff;
+}

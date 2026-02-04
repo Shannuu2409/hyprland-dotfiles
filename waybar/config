@@ -1,0 +1,104 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "spacing": 2,
+
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": [
+        "pulseaudio",
+        "custom/separator",
+        "network",
+        "custom/separator",
+        "battery",
+        "tray"
+    ],
+
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "•",
+            "2": "•",
+            "3": "•",
+            "4": "•",
+            "5": "•",
+            "6": "•",
+            "7": "•",
+            "8": "•",
+            "9": "•",
+            "10": "•",
+            "urgent": "",
+            "active": "•",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 2
+        }
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "separate-outputs": true,
+        "max-length": 50,
+        "rewrite": {
+            "(.*) — kitty": "Shannu's PC",
+            "(.*) — alacritty": "Shannu's PC",
+            "(.*) — foot": "Shannu's PC",
+            "kitty": "Shannu's PC",
+            "alacritty": "Shannu's PC",
+            "foot": "Shannu's PC",
+            "wezterm": "Shannu's PC",
+            "^$": "Shannu's PC"
+        }
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+
+    "clock": {
+        "timezone": "Asia/Kolkata",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%H:%M}",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "BAT {capacity}%",
+        "format-charging": "CHG {capacity}%",
+        "format-plugged": "PWR {capacity}%",
+        "format-alt": "{time}"
+    },
+
+    "network": {
+        "format-wifi": "NET {signalStrength}%",
+        "format-ethernet": "ETH Connected",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "ETH (No IP)",
+        "format-disconnected": "Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+    "pulseaudio": {
+        "format": "VOL {volume}%",
+        "format-bluetooth": "BT {volume}%",
+        "format-bluetooth-muted": "BT MUTE",
+        "format-muted": "MUTE",
+        "format-source": "{volume}%",
+        "format-source-muted": "",
+        "on-click": "pavucontrol"
+    },
+
+    "custom/separator": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    }
+}
