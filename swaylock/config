@@ -1,0 +1,42 @@
+# General
+daemonize
+ignore-empty-password
+show-failed-attempts
+clock
+
+# The "Engine" Start
+# Sometimes taking a screenshot first initializes the buffer correctly
+screenshots
+
+# Wallpaper - Use the full absolute path
+image=/home/shannu24/.config/swaylock/lock-screen-wallpapers/gojosatoru.jpg
+
+# Effects (Must come AFTER image)
+# If these are too high, the image might look like a solid color
+effect-blur=7x5
+effect-vignette=0.5:0.5
+fade-in=0.3
+
+# Indicator Settings
+indicator
+indicator-radius=200
+indicator-thickness=20
+font=Inter
+
+# Formatting
+datestr=%a, %B %e
+timestr=%I:%M %p
+
+# Colors
+color=1f1d2e
+line-color=1f1d2e
+ring-color=191724
+inside-color=1f1d2e
+separator-color=00000000
+text-color=e0def4
+key-hl-color=eb6f92
+bs-hl-color=31748f
+ring-ver-color=eb6f92
+inside-ver-color=1f1d2e
+ring-wrong-color=31748f
+text-wrong-color=31748f
